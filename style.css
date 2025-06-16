@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+/* Use your original background image and color */
+body {
+  background: #224941 url('./img/bg.jpg') no-repeat center center/cover;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+
+/* Main Content Layout */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.app-title {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  color: #e6f5f2;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+/* Enhanced Quote Box */
+.quote-box {
+  background: rgba(34, 73, 65, 0.7);
+  border-radius: 18px;
+  padding: 1.2rem 2rem;
+  margin-bottom: 2rem;
+  max-width: 540px;
+  box-shadow: 0 4px 24px 0 rgba(68, 139, 124, 0.13);
+  text-align: center;
+  position: relative;
+}
+
+.quote-box blockquote {
+  margin: 0;
+  font-size: 1.35rem;
+  font-style: italic;
+  color: #e0f7fa;
+  line-height: 1.6;
+  position: relative;
+}
+
+.quote-box blockquote:before {
+  content: "“";
+  font-size: 2.5rem;
+  color: #b3dec1;
+  position: absolute;
+  left: -1.2rem;
+  top: -1.5rem;
+  opacity: 0.5;
+  font-family: serif;
+}
+
+.quote-box blockquote:after {
+  content: "”";
+  font-size: 2.5rem;
+  color: #b3dec1;
+  position: absolute;
+  right: -1.2rem;
+  bottom: -1.5rem;
+  opacity: 0.5;
+  font-family: serif;
+}
+
+.instruction {
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  color: #cce8e0;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .main-content {
+    padding: 1rem 0;
+  }
+  .quote-box {
+    padding: 1rem;
+    font-size: 1rem;
+    max-width: 95vw;
+  }
+  .app-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* Relaxer App Original Styles */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  height: 300px;
+  width: 300px;
+  position: relative;
+  transform: scale(1);
+}
+
+.circle {
+  background-color: #010f1c;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.gradient-circle {
+  background: conic-gradient(
+    #55b7a4 0%,
+    #4ca493 40%,
+    #fff 40%,
+    #fff 60%,
+    #336d62 60%,
+    #2a5b52 100%
+  );
+  height: 320px;
+  width: 320px;
+  z-index: -2;
+  border-radius: 50%;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+}
+
+.pointer {
+  background-color: #fff;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  display: block;
+}
+
+.pointer-container {
+  position: absolute;
+  top: -40px;
+  left: 140px;
+  width: 20px;
+  height: 190px;
+  animation: rotate 7.5s linear forwards infinite;
+  transform-origin: bottom center;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.container.grow {
+  animation: grow 3s linear forwards;
+}
+
+@keyframes grow {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
+.container.shrink {
+  animation: shrink 3s linear forwards;
+}
+
+@keyframes shrink {
+  from {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
+  }
+}
