@@ -2,7 +2,7 @@
 
 A beautiful, minimal web app for mindful breathing and relaxation.
 
-![Relaxer App Screenshot](./img/screenshot.png)
+![Relaxer App Screenshot](./img/hold.png)
 
 ---
 
