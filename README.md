@@ -6,6 +6,8 @@ A beautiful, minimal web app for mindful breathing and relaxation.
 
 ---
 
+https://sumanx16.github.io/Relaxer-App/
+
 ## ✨ Features
 
 - **Guided Breathing Animation:**  
